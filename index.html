@@ -1,135 +1,301 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Dashboard</title>
+    <title>NeoStore Dashboard</title>
 </head>
 <body>
-    <div class="grid-container">
+    <div class="background-animation">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+    </div>
 
+    <div class="grid-container">
         <header class="header">
-          <div class="menu-icon" onclick="openSidebar()">
-            <span class="material-icons-outlined">menu</span>
-          </div>
-          <div class="header-left">
-            <span class="material-icons-outlined">search</span>
-          </div>
-          <div class="header-right">
-            <span class="material-icons-outlined">notifications</span>
-            <span class="material-icons-outlined">email</span>
-            <span class="material-icons-outlined">account_circle</span>
-          </div>
+            <div class="menu-icon" onclick="openSidebar()">
+                <span class="material-icons-outlined">menu</span>
+            </div>
+            <div class="header-left">
+                <div class="search-container">
+                    <span class="material-icons-outlined">search</span>
+                    <input type="text" placeholder="Buscar..." class="search-input">
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="header-icon">
+                    <span class="material-icons-outlined">notifications</span>
+                    <div class="notification-badge">3</div>
+                </div>
+                <div class="header-icon">
+                    <span class="material-icons-outlined">email</span>
+                </div>
+                <div class="profile-container">
+                    <div class="profile-avatar">
+                        <span class="material-icons-outlined">account_circle</span>
+                    </div>
+                    <div class="profile-info">
+                        <span class="profile-name">Admin</span>
+                        <span class="profile-role">Gerente</span>
+                    </div>
+                </div>
+            </div>
         </header> 
 
         <aside id="sidebar">
             <div class="sidebar-title">
-              <div class="sidebar-brand">
-                <span class="material-icons-outlined">shopping_cart</span> STORE
-              </div>
-              <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+                <div class="sidebar-brand">
+                    <div class="brand-icon">
+                        <span class="material-icons-outlined">storefront</span>
+                    </div>
+                    <div class="brand-text">
+                        <span class="brand-name">NeoStore</span>
+                        <span class="brand-subtitle">Dashboard</span>
+                    </div>
+                </div>
+                <span class="material-icons-outlined close-btn" onclick="closeSidebar()">close</span>
             </div>
-    
-            <ul class="sidebar-list">
-              <li class="sidebar-list-item">
-                <a href="#" target="_blank">
-                  <span class="material-icons-outlined">dashboard</span> Dashboard
-                </a>
-              </li>
-              <li class="sidebar-list-item">
-                <a href="#" target="_blank">
-                  <span class="material-icons-outlined">inventory_2</span> Products
-                </a>
-              </li>
-              <li class="sidebar-list-item">
-                <a href="#" target="_blank">
-                  <span class="material-icons-outlined">category</span> Categories
-                </a>
-              </li>
-              <li class="sidebar-list-item">
-                <a href="#" target="_blank">
-                  <span class="material-icons-outlined">groups</span> Customers
-                </a>
-              </li>
-              <li class="sidebar-list-item">
-                <a href="#" target="_blank">
-                  <span class="material-icons-outlined">fact_check</span> Inventory
-                </a>
-              </li>
-              <li class="sidebar-list-item">
-                <a href="#" target="_blank">
-                  <span class="material-icons-outlined">poll</span> Reports
-                </a>
-              </li>
-              <li class="sidebar-list-item">
-                <a href="#" target="_blank">
-                  <span class="material-icons-outlined">settings</span> Settings
-                </a>
-              </li>
-            </ul>
-          </aside>
 
-          <main class="main-container">
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item active">
+                    <a href="#" target="_blank">
+                        <div class="menu-item-content">
+                            <span class="material-icons-outlined">dashboard</span>
+                            <span class="menu-text">Dashboard</span>
+                        </div>
+                        <div class="menu-indicator"></div>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#" target="_blank">
+                        <div class="menu-item-content">
+                            <span class="material-icons-outlined">inventory_2</span>
+                            <span class="menu-text">Produtos</span>
+                        </div>
+                        <div class="menu-indicator"></div>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#" target="_blank">
+                        <div class="menu-item-content">
+                            <span class="material-icons-outlined">category</span>
+                            <span class="menu-text">Categorias</span>
+                        </div>
+                        <div class="menu-indicator"></div>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#" target="_blank">
+                        <div class="menu-item-content">
+                            <span class="material-icons-outlined">groups</span>
+                            <span class="menu-text">Clientes</span>
+                        </div>
+                        <div class="menu-indicator"></div>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#" target="_blank">
+                        <div class="menu-item-content">
+                            <span class="material-icons-outlined">fact_check</span>
+                            <span class="menu-text">Estoque</span>
+                        </div>
+                        <div class="menu-indicator"></div>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#" target="_blank">
+                        <div class="menu-item-content">
+                            <span class="material-icons-outlined">analytics</span>
+                            <span class="menu-text">Relatórios</span>
+                        </div>
+                        <div class="menu-indicator"></div>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#" target="_blank">
+                        <div class="menu-item-content">
+                            <span class="material-icons-outlined">settings</span>
+                            <span class="menu-text">Configurações</span>
+                        </div>
+                        <div class="menu-indicator"></div>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar-footer">
+                <div class="upgrade-card">
+                    <div class="upgrade-icon">
+                        <span class="material-icons-outlined">workspace_premium</span>
+                    </div>
+                    <div class="upgrade-content">
+                        <h4>Upgrade Pro</h4>
+                        <p>Desbloqueie recursos avançados</p>
+                        <button class="upgrade-btn">Atualizar</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-container">
             <div class="main-title">
-              <h2>DASHBOARD</h2>
+                <div class="title-content">
+                    <h1>Dashboard</h1>
+                    <p>Bem-vindo de volta! Aqui está o resumo do seu negócio hoje.</p>
+                </div>
+                <div class="title-actions">
+                    <button class="action-btn secondary">
+                        <span class="material-icons-outlined">file_download</span>
+                        Exportar
+                    </button>
+                    <button class="action-btn primary">
+                        <span class="material-icons-outlined">add</span>
+                        Novo Produto
+                    </button>
+                </div>
             </div>
-    
+
             <div class="main-cards">
-    
-              <div class="card">
-                <div class="card-inner">
-                  <h3>PRODUCTS</h3>
-                  <span class="material-icons-outlined">inventory_2</span>
+                <div class="card card-products">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <span class="material-icons-outlined">inventory_2</span>
+                        </div>
+                        <div class="card-menu">
+                            <span class="material-icons-outlined">more_vert</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Produtos</h3>
+                        <div class="card-number">249</div>
+                        <div class="card-trend positive">
+                            <span class="material-icons-outlined">trending_up</span>
+                            <span>+12% este mês</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                    </div>
                 </div>
-                <h1>249</h1>
-              </div>
-    
-              <div class="card">
-                <div class="card-inner">
-                  <h3>CATEGORIES</h3>
-                  <span class="material-icons-outlined">category</span>
+
+                <div class="card card-categories">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <span class="material-icons-outlined">category</span>
+                        </div>
+                        <div class="card-menu">
+                            <span class="material-icons-outlined">more_vert</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Categorias</h3>
+                        <div class="card-number">25</div>
+                        <div class="card-trend positive">
+                            <span class="material-icons-outlined">trending_up</span>
+                            <span>+3 novas</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%"></div>
+                        </div>
+                    </div>
                 </div>
-                <h1>25</h1>
-              </div>
-    
-              <div class="card">
-                <div class="card-inner">
-                  <h3>CUSTOMERS</h3>
-                  <span class="material-icons-outlined">groups</span>
+
+                <div class="card card-customers">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <span class="material-icons-outlined">groups</span>
+                        </div>
+                        <div class="card-menu">
+                            <span class="material-icons-outlined">more_vert</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Clientes</h3>
+                        <div class="card-number">1,500</div>
+                        <div class="card-trend positive">
+                            <span class="material-icons-outlined">trending_up</span>
+                            <span>+8% este mês</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
                 </div>
-                <h1>1500</h1>
-              </div>
-    
-              <div class="card">
-                <div class="card-inner">
-                  <h3>ALERTS</h3>
-                  <span class="material-icons-outlined">notification_important</span>
+
+                <div class="card card-alerts">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <span class="material-icons-outlined">notification_important</span>
+                        </div>
+                        <div class="card-menu">
+                            <span class="material-icons-outlined">more_vert</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Alertas</h3>
+                        <div class="card-number">56</div>
+                        <div class="card-trend negative">
+                            <span class="material-icons-outlined">trending_down</span>
+                            <span>-15% esta semana</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="progress-bar">
+                            <div class="progress-fill warning" style="width: 40%"></div>
+                        </div>
+                    </div>
                 </div>
-                <h1>56</h1>
-              </div>
-    
             </div>
-    
+
             <div class="charts">
-    
-              <div class="charts-card">
-                <h2 class="chart-title">Top 5 Products</h2>
-                <div id="bar-chart"></div>
-              </div>
-    
-              <div class="charts-card">
-                <h2 class="chart-title">Purchase and Sales Orders</h2>
-                <div id="area-chart"></div>
-              </div>
-    
+                <div class="charts-card">
+                    <div class="chart-header">
+                        <h2 class="chart-title">Top 5 Produtos</h2>
+                        <div class="chart-actions">
+                            <button class="chart-btn">
+                                <span class="material-icons-outlined">refresh</span>
+                            </button>
+                            <button class="chart-btn">
+                                <span class="material-icons-outlined">more_vert</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="bar-chart"></div>
+                </div>
+
+                <div class="charts-card">
+                    <div class="chart-header">
+                        <h2 class="chart-title">Pedidos de Compra e Vendas</h2>
+                        <div class="chart-actions">
+                            <button class="chart-btn">
+                                <span class="material-icons-outlined">refresh</span>
+                            </button>
+                            <button class="chart-btn">
+                                <span class="material-icons-outlined">more_vert</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="area-chart"></div>
+                </div>
             </div>
-          </main>
-        </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+        </main>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
